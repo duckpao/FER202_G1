@@ -1,0 +1,39 @@
+{
+  "categories": [
+    { "id": 1, "name": "Pizza" },
+    { "id": 2, "name": "Burger" },
+    { "id": 3, "name": "Drinks" },
+    { "id": 4, "name": "Dessert" }
+  ],
+
+  "foods": [
+    { "id": 1, "name": "Pepperoni Pizza", "price": 120000, "categoryId": 1, "image": "https://i.imgur.com/pepperoni.jpg", "description": "Pizza phô mai pepperoni cổ điển" },
+    { "id": 2, "name": "Cheese Burger", "price": 90000, "categoryId": 2, "image": "https://i.imgur.com/burger.jpg", "description": "Bánh burger bò với phô mai tan chảy" },
+    { "id": 3, "name": "Coca Cola", "price": 20000, "categoryId": 3, "image": "https://i.imgur.com/coke.jpg", "description": "Thức uống có ga tươi mát" },
+    { "id": 4, "name": "Chocolate Cake", "price": 60000, "categoryId": 4, "image": "https://i.imgur.com/cake.jpg", "description": "Bánh socola ngọt ngào và mềm mịn" }
+  ],
+
+  "users": [
+    { "id": 1, "username": "admin", "password": "123456", "role": "admin" },
+    { "id": 2, "username": "bao", "password": "123456", "role": "customer" }
+  ],
+
+  "cartItems": [
+    { "id": 1, "userId": 2, "foodId": 1, "quantity": 1 },
+    { "id": 2, "userId": 2, "foodId": 3, "quantity": 2 }
+  ],
+
+  "orders": [
+    {
+      "id": 1,
+      "userId": 2,
+      "items": [
+        { "foodId": 1, "quantity": 1 },
+        { "foodId": 3, "quantity": 2 }
+      ],
+      "total": 160000,
+      "status": "completed",
+      "createdAt": "2025-10-16T09:00:00Z"
+    }
+  ]
+}
