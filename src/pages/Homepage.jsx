@@ -19,11 +19,10 @@ function Homepage({ addToCart, searchTerm, setMenu }) {
       .finally(() => setLoading(false));
   }, []);
 
-  // const filteredMenuItems = menuItems.filter(item => {
-  //   const matchSearch = item.name?.toLowerCase().includes(searchTerm.toLowerCase());
-  //   const matchCategory = selectedCategory === null || item.categoryId === selectedCategory;
-  //   return matchSearch && matchCategory;
-  // });
+  const filteredMenuItems = menuItems.filter(item => {
+    const matchSearch = item.name?.toLowerCase().includes((searchTerm || '').toLowerCase());
+    return matchSearch;
+  });
 
   return (
     <Row className="gx-0" style={{ paddingTop: '56px', minHeight: '100vh' }}>
@@ -40,7 +39,7 @@ function Homepage({ addToCart, searchTerm, setMenu }) {
             <Alert variant="warning">No menu items found.</Alert>
           ) : (
             <Row className="gx-4 gy-4">
-              {menuItems.map(item => (
+              {filteredMenuItems.map(item => (
                 <Col key={item.id} lg={6} md={6}>
                   <CardFood
                     id={item.id}

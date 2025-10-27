@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Homepage";
-import CustomerHeader from "./components/header/CustomerHeader";
+import { useState } from 'react'
+import CustomerScreen from "./pages/CustomerScreen";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <BrowserRouter>
-      <CustomerHeader />
       <Routes>
-        <Route path="" element={<Homepage />} />
+        <Route path="" element={<CustomerScreen />} />
       </Routes>
     </BrowserRouter>
 
