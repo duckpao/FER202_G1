@@ -356,6 +356,20 @@
       "status": "checked",
       "orderTime": "2025-10-21T13:12:24.138Z",
       "expectedServeTime": "2025-10-21T13:27:24.140Z"
+    },
+    {
+      "id": "c42f",
+      "items": [
+        {
+          "menuId": "104",
+          "quantity": 1,
+          "status": "ordered",
+          "remainingMinutes": 2
+        }
+      ],
+      "status": "ordered",
+      "orderTime": "2025-11-06T01:40:54.498Z",
+      "expectedServeTime": "2025-11-06T01:55:54.501Z"
     }
   ],
   "roles": [
