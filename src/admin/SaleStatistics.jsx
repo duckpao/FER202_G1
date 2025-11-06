@@ -47,39 +47,7 @@ export default function SalesStatistics() {
 
   return (
     <Container className="mt-4">
-      <Row>
-        <Col>
-          <h4 className="mb-3">Sales Statistics</h4>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Menu ID</th>
-                <th>Product Name</th>
-                <th>Unit Price</th>
-                <th>Quantity Sold</th>
-                <th>Total Revenue</th>
-              </tr>
-            </thead>
-            <tbody>
-              {statistics.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.id}</td>
-                  <td>{item.name}</td>
-                  <td>${item.price}</td>
-                  <td>{item.quantity}</td>
-                  <td>${item.total}</td>
-                </tr>
-              ))}
-              <tr>
-                <td colSpan={4} className="text-end fw-bold">
-                  Total Revenue:
-                </td>
-                <td className="fw-bold">${totalRevenue}</td>
-              </tr>
-            </tbody>
-          </Table>
-        </Col>
-      </Row>
+
     </Container>
   );
 }
